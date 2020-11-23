@@ -25,9 +25,9 @@ This takes around 15 minutes to run so be patient.
 #
 
 # stdlib
-import sys
 import os
 import pathlib
+import sys
 import urllib.request
 
 if not pathlib.Path("gnome_icon_builder.py").is_file():
@@ -35,19 +35,21 @@ if not pathlib.Path("gnome_icon_builder.py").is_file():
 		"https://raw.githubusercontent.com/domdfcoding/custom_wx_icons/master/gnome_icon_builder.py",
 		"gnome_icon_builder.py")
 
-sys.path.append(".")
+sys.path.append('.')
+
+# 3rd party
+from gnome_icon_builder import get_scalable_directories, main
 
 # this package
-from gnome_icon_builder import get_scalable_directories, main
 from wx_icons_suru import theme_index_path
 
 scalable_directories = get_scalable_directories(theme_index_path)
 
-SOURCES = ('actions', 'apps', 'categories', 'devices', 'emblems', 'legacy', 'mimetypes', 'places', 'status', 'wip')
+SOURCES = ("actions", "apps", "categories", "devices", "emblems", "legacy", "mimetypes", "places", "status", "wip")
 output_dir = "./wx_icons_suru/Suru"
 
 # DPI multipliers to render at
 dpis = [1, 2]
 
 for source in SOURCES:
-	main(os.path.join('.', 'svg_src', source), dpis, output_dir, scalable_directories)
+	main(os.path.join('.', "svg_src", source), dpis, output_dir, scalable_directories)

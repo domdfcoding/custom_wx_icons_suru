@@ -34,6 +34,8 @@ from wx_icons_humanity import HumanityIconTheme, wxHumanityIconTheme
 # this package
 from wx_icons_suru import Suru
 
+__all__ = ["SuruIconTheme", "version", "wxSuruIconTheme"]
+
 with importlib_resources.path(Suru, "index.theme") as theme_index_path_:
 	theme_index_path = str(theme_index_path_)
 
@@ -106,7 +108,7 @@ class wxSuruIconTheme(wxHumanityIconTheme):
 			return super().CreateBitmap(id, client, size)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	# theme = SuruIconTheme.from_configparser(theme_index_path)
 	theme = SuruIconTheme.create()
 
