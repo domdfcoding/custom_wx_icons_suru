@@ -55,7 +55,7 @@ class SuruIconTheme(HumanityIconTheme):
 	@classmethod
 	def create(cls):
 		"""
-		Create an instance of the Suru Icon Theme
+		Create an instance of the Suru Icon Theme.
 		"""
 
 		with importlib_resources.path(Suru, "index.theme") as theme_index_path_:
@@ -96,7 +96,12 @@ class SuruIconTheme(HumanityIconTheme):
 class wxSuruIconTheme(wxHumanityIconTheme):
 	_suru_theme: IconTheme = SuruIconTheme.create()
 
-	def CreateBitmap(self, id: Any, client: Any, size: Union[Tuple[int], wx.Size]) -> wx.Bitmap:
+	def CreateBitmap(
+			self,
+			id: Any,  # noqa: A002  # pylint: disable=redefined-builtin
+			client: Any,
+			size: Union[Tuple[int], wx.Size],
+			) -> wx.Bitmap:
 		icon = self._suru_theme.find_icon(id, size[0], None)
 		if icon:
 			print(icon, icon.path)
@@ -115,7 +120,7 @@ if __name__ == "__main__":
 	# for directory in theme.directories:
 	# 	print(directory.icons)
 	# 3rd party
-	from wx_icons_hicolor import test, test_random_icons  # TODO
+	# from wx_icons_hicolor import test, test_random_icons  # TODO
 
 	# test_random_icons(theme)
 	test.test_icon_theme(theme, show_success=False)
