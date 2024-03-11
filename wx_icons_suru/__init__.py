@@ -1,6 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 #
 #  __init__.py
+"""
+**Suru icon theme for wxPython 🐍**.
+"""
 #
 #  Copyright (C) 2020 Dominic Davis-Foster <dominic@davis-foster.co.uk>
 #
@@ -23,11 +26,11 @@
 #
 
 # stdlib
-from typing import Any, Optional, Tuple, Union
+from typing import Any, Optional, Tuple, Type, Union
 
 # 3rd party
-import importlib_resources
 import wx  # type: ignore
+from domdf_python_tools.compat import importlib_resources
 from wx_icons_hicolor import Icon, IconTheme
 from wx_icons_humanity import HumanityIconTheme, wxHumanityIconTheme
 
@@ -43,17 +46,21 @@ __version__: str = "0.1.2"
 
 
 def version() -> str:
+	"""
+	Returns the version of this package and the icon theme, formatted for printing.
+	"""
+
 	return f"""wx_icons_suru
 Version {__version__}
 Suru Icon Theme Version 20.04.4
 """
 
 
-class SuruIconTheme(HumanityIconTheme):
+class SuruIconTheme(HumanityIconTheme):  # noqa: D101
 	_humanity_theme: IconTheme = HumanityIconTheme.create()
 
 	@classmethod
-	def create(cls):
+	def create(cls: Type["SuruIconTheme"]) -> "SuruIconTheme":
 		"""
 		Create an instance of the Suru Icon Theme.
 		"""
@@ -63,27 +70,13 @@ class SuruIconTheme(HumanityIconTheme):
 
 		return cls.from_configparser(theme_index_path)
 
-	def find_icon(
+	def find_icon(  # noqa: D102
 			self,
 			icon_name: str,
 			size: int,
 			scale: Any,
 			prefer_this_theme: bool = True,
 			) -> Optional[Icon]:
-		"""
-
-		:param icon_name:
-		:type icon_name:
-		:param size:
-		:type size:
-		:param scale:
-		:type scale:
-		:param prefer_this_theme: Return an icon from this theme even if it has to be resized,
-			rather than a correctly sized icon from the parent theme.
-		:type prefer_this_theme:
-		:return:
-		:rtype:
-		"""
 
 		icon = self._do_find_icon(icon_name, size, scale, prefer_this_theme)
 		if icon:
@@ -93,15 +86,15 @@ class SuruIconTheme(HumanityIconTheme):
 			return self._humanity_theme.find_icon(icon_name, size, scale)
 
 
-class wxSuruIconTheme(wxHumanityIconTheme):
+class wxSuruIconTheme(wxHumanityIconTheme):  # noqa: D101
 	_suru_theme: IconTheme = SuruIconTheme.create()
 
-	def CreateBitmap(
-			self,
-			id: Any,  # noqa: A002  # pylint: disable=redefined-builtin
-			client: Any,
-			size: Union[Tuple[int], wx.Size],
-			) -> wx.Bitmap:
+	def CreateBitmap(  # noqa: D102
+		self,
+		id: Any,  # noqa: A002  # pylint: disable=redefined-builtin
+		client: Any,
+		size: Union[Tuple[int], wx.Size],
+		) -> wx.Bitmap:
 		icon = self._suru_theme.find_icon(id, size[0], None)
 		if icon:
 			print(icon, icon.path)
@@ -121,6 +114,7 @@ if __name__ == "__main__":
 	# 	print(directory.icons)
 	# 3rd party
 	# from wx_icons_hicolor import test, test_random_icons  # TODO
+	from wx_icons_hicolor import test
 
 	# test_random_icons(theme)
 	test.test_icon_theme(theme, show_success=False)
