@@ -55,3 +55,6 @@ keywords:
 
 imgbot_ignore:
   - "wx_icons_suru/*"
+
+tox_unmanaged:
+ - testenv
