@@ -31,5 +31,13 @@ lines_between_types = 0
 use_parentheses = true
 remove_redundant_aliases = true
 default_section = "THIRDPARTY"
-known_third_party = [ "github", "importlib_resources", "requests", "wx_icons_hicolor", "wx_icons_humanity", "wxpython",]
-known_first_party = "wx_icons_suru"
+known_third_party = [
+    "domdf_python_tools",
+    "github",
+    "importlib_resources",
+    "requests",
+    "wx_icons_hicolor",
+    "wx_icons_humanity",
+    "wxpython",
+]
+known_first_party = [ "wx_icons_suru",]
