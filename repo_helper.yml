@@ -11,10 +11,8 @@ short_desc: 'Suru icon theme for wxPython 🐍'
 enable_tests: False
 enable_conda: False
 
-
 # Versions to run tests for
 python_versions:
-  - '3.6'
   - '3.7'
   - '3.8'
   - '3.9'
