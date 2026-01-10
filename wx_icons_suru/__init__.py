@@ -29,7 +29,7 @@
 from typing import Any, Optional, Tuple, Type, Union
 
 # 3rd party
-import wx  # type: ignore
+import wx  # type: ignore[import-not-found]
 from domdf_python_tools.compat import importlib_resources
 from wx_icons_hicolor import Icon, IconTheme
 from wx_icons_humanity import HumanityIconTheme, wxHumanityIconTheme
@@ -94,7 +94,7 @@ class wxSuruIconTheme(wxHumanityIconTheme):  # noqa: D101
 		id: Any,  # noqa: A002  # pylint: disable=redefined-builtin
 		client: Any,
 		size: Union[Tuple[int], wx.Size],
-		) -> wx.Bitmap:
+	) -> wx.Bitmap:
 		icon = self._suru_theme.find_icon(id, size[0], None)
 		if icon:
 			print(icon, icon.path)
