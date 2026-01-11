@@ -42,7 +42,7 @@ __all__ = ["SuruIconTheme", "version", "wxSuruIconTheme"]
 with importlib_resources.path(Suru, "index.theme") as theme_index_path_:
 	theme_index_path = str(theme_index_path_)
 
-__version__: str = "0.1.2"
+__version__: str = "0.2.0"
 
 
 def version() -> str:
