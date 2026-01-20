@@ -116,7 +116,7 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install wx_icons_suru
+	$ python -m pip install wx-icons-suru
 
 .. end installation
 

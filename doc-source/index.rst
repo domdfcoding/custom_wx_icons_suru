@@ -118,8 +118,9 @@ Installation
 
 .. start installation
 
-.. installation:: wx_icons_suru
+.. installation:: custom_wx_icons_suru
 	:pypi:
+	:pypi-name: wx-icons-suru
 	:github:
 
 .. end installation
