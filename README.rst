@@ -65,20 +65,20 @@ This package provides a wxPython wxArtProvider class with icons from the Suru Ic
 	:target: https://www.codefactor.io/repository/github/domdfcoding/custom_wx_icons_suru
 	:alt: CodeFactor Grade
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/wx_icons_suru
-	:target: https://pypi.org/project/wx_icons_suru/
+.. |pypi-version| image:: https://img.shields.io/pypi/v/wx-icons-suru
+	:target: https://pypi.org/project/wx-icons-suru/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wx_icons_suru?logo=python&logoColor=white
-	:target: https://pypi.org/project/wx_icons_suru/
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wx-icons-suru?logo=python&logoColor=white
+	:target: https://pypi.org/project/wx-icons-suru/
 	:alt: PyPI - Supported Python Versions
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wx_icons_suru
-	:target: https://pypi.org/project/wx_icons_suru/
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wx-icons-suru
+	:target: https://pypi.org/project/wx-icons-suru/
 	:alt: PyPI - Supported Implementations
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/wx_icons_suru
-	:target: https://pypi.org/project/wx_icons_suru/
+.. |wheel| image:: https://img.shields.io/pypi/wheel/wx-icons-suru
+	:target: https://pypi.org/project/wx-icons-suru/
 	:alt: PyPI - Wheel
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/custom_wx_icons_suru
@@ -99,8 +99,8 @@ This package provides a wxPython wxArtProvider class with icons from the Suru Ic
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
-.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wx_icons_suru
-	:target: https://pypistats.org/packages/wx_icons_suru
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wx-icons-suru
+	:target: https://pypistats.org/packages/wx-icons-suru
 	:alt: PyPI - Downloads
 
 .. end shields
@@ -116,7 +116,7 @@ To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install wx_icons_suru
+	$ python -m pip install wx-icons-suru
 
 .. end installation
 

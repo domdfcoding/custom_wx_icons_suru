@@ -68,22 +68,22 @@ This package provides a wxPython wxArtProvider class with icons from the Suru Ic
 		:alt: CodeFactor Grade
 
 	.. |pypi-version| pypi-shield::
-		:project: wx_icons_suru
+		:project: wx-icons-suru
 		:version:
 		:alt: PyPI - Package Version
 
 	.. |supported-versions| pypi-shield::
-		:project: wx_icons_suru
+		:project: wx-icons-suru
 		:py-versions:
 		:alt: PyPI - Supported Python Versions
 
 	.. |supported-implementations| pypi-shield::
-		:project: wx_icons_suru
+		:project: wx-icons-suru
 		:implementations:
 		:alt: PyPI - Supported Implementations
 
 	.. |wheel| pypi-shield::
-		:project: wx_icons_suru
+		:project: wx-icons-suru
 		:wheel:
 		:alt: PyPI - Wheel
 
@@ -107,7 +107,7 @@ This package provides a wxPython wxArtProvider class with icons from the Suru Ic
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
-		:project: wx_icons_suru
+		:project: wx-icons-suru
 		:downloads: month
 		:alt: PyPI - Downloads
 
@@ -118,8 +118,9 @@ Installation
 
 .. start installation
 
-.. installation:: wx_icons_suru
+.. installation:: custom_wx_icons_suru
 	:pypi:
+	:pypi-name: wx-icons-suru
 	:github:
 
 .. end installation
